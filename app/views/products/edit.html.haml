@@ -1,7 +1,6 @@
-%h1 Editing product
-
-= render 'form'
-
-= link_to 'Show', category_product_path(category, product)
-\|
-= link_to 'Back', category_path(category)
+.wrapper_with_padding
+  %h1 Editing product
+  = render 'form'
+  = link_to 'Show', category_product_path(category, product), class: 'btn btn-primary'
+  \|
+  = link_to 'Back', category_path(category), class: 'btn btn-primary'

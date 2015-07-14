@@ -1,25 +1,24 @@
-%p#notice= notice
-%p#error= flash[:error]
+.wrapper_with_padding
+  %p#notice= notice
+  %p#error= flash[:error]
 
-%p
-  %b Title:
-  = product.title
-%p
-  %b Description:
-  = product.description
-%p
-  %b Price:
-  = product.price
+  .products_class
+  %table.table
+    %tr
+      %th Title:
+      %th= product.title
+      %tr
+        %td Description:
+        %td= product.description
+      %tr
+        %td Price:
+        %td= product.price
+      %tr
+        %td Category
+        %td= product.category.name
 
-%p
-  %b Category
-  = product.category.name
-
-%h3 Reviews
-= render 'reviews/form'
-
-= render reviews
-- if current_user && product.user_id == current_user.id
+  = render 'reviews/form'
+  %h3 Reviews (average rating: #{product.average_rating})
+  = render reviews
   = link_to 'Edit', edit_category_product_path(category.id, product.id)
-
-= link_to 'Back', category_products_path, class: 'btn btn-primary'
+  = link_to 'Back', category, class: 'btn btn-primary'
