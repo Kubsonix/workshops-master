@@ -1,2 +1,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  margin-top: 60px;
+  background-image: url(background.png);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper_with_padding {
+  width: 50%;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav {
+  float: right;
+  a {
+	   text-decoration: none;
+ 		 color: gray;
+		 font-size: 20px;
+		 line-height: 1;
+     padding-right: 3rem;
+		 margin-left: 2rem;
+		 &:hover {
+		     color: 7FFFD4;
+         text-decoration: overline;
+         text-overline-width: 10px;
+		}
+	}
+}

@@ -1,15 +1,16 @@
-%p#notice= notice
-%p
-  %h1 Category: #{category.name}
-  .category_class
-    %table.table
-      %tr
-        %th Products:
-      %th
+.wrapper_with_padding
+  %p#notice= notice
+  %p
+    %h2
+      %b Category:
+      #{category.name}
+    .category_class
+      %table.table
+        %p Products:
         -category.products.each do |product|
           %tr
             %td= link_to product.title, category_product_url(category, product)
-    .class_form
-      New product
-      = render 'products/form'
       = link_to 'Back', categories_path, class: 'btn btn-primary'
+.class_form
+  %h2 New product
+= render 'products/form'

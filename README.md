@@ -53,13 +53,13 @@ Setup the database for your application (development and test environments):
 
 13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
 
-14. Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
+14. [OK] Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
 
-15. On user profile list 5 last user's reviews with formated date (dd-mm-yy).
+15. [OK] On user profile list 5 last user's reviews with formated date (dd-mm-yy).
 
 16. [OK] Fill `seeds.rb` with 5 accounts for user and one admin account to login and example category with products and reviews.
 
-17. Make sure your project is available on Heroku with **seeds data**.
+17. [OK] Make sure your project is available on Heroku with **seeds data**.
 
 ## What disqualifies your application
 
