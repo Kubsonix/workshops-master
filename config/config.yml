@@ -1,0 +1,11 @@
+defaults: &defaults
+  workshops_name: 'Netguru Warsaw Workshops 2015'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
