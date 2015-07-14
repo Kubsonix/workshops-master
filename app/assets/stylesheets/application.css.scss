@@ -18,10 +18,10 @@ h1 {
   font-weight: bold;
 }
 
-
 p {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 nav {
@@ -46,4 +46,22 @@ nav {
   tr:hover {
     background-color: #e4e4e4;
   }
+}
+
+.my_profile {
+  .glyphicon {
+    font-size: 100px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 10px;
+  }
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
