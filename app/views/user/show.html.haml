@@ -1,0 +1,25 @@
+
+%table.table
+  %tr
+    %td
+      .glyphicon.glyphicon-user
+        #{@user.firstname} #{@user.lastname}
+    %tr
+      %td
+        .glyphicon.glyphicon-phone
+          #{@user.email}
+    %tr
+      %td
+        .glyphicon.glyphicon-pencil
+          Joined at: #{@user.created_at.strftime("%d-%m-%Y")}
+
+%table.table.table-hover
+  %tr
+    %th Product
+    %th Review
+    %th Date
+  - @reviews.last(5).reverse.each do |r|
+    %tr
+      %td= r.product.title
+      %td= r.content
+      %td= r.created_at.strftime("%d-%m-%y")

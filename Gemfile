@@ -22,17 +22,24 @@ gem 'konf'
 
 group :development do
   gem 'spring'
+  gem 'faker'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'shoulda-matchers'
   gem 'pry'
 end
 
 group :test do
   gem 'database_cleaner'
+  gem 'faker'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor', '0.0.2'
+end
 ruby '2.1.5'
