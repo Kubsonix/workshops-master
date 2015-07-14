@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :create]
-  
+  before_action :is_admin, except: [:index, :destroy, :show]
   expose(:categories)
   expose(:category)
   expose(:product) { Product.new }
@@ -44,4 +44,8 @@ class CategoriesController < ApplicationController
     def category_params
       params.require(:category).permit(:name)
     end
+
+    def is_admin
+     redirect_to new_user_session_path unless current_user && current_user.admin?
+   end
 end
