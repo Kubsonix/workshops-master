@@ -30,7 +30,7 @@ Setup the database for your application (development and test environments):
   * Most of the configuration changes require the server to be restarted.
   * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
   
-3. Check `spec/controllers/categories_controller_spec.rb` - there should be a
+3. [OK] Check `spec/controllers/categories_controller_spec.rb` - there should be a
    couple errors on actions checking admin presence.
 
 4. Next up: `Product` model and `spec/models/product_spec.rb`. Play with validations a bit, calculate average rating and you'll be good to go.
