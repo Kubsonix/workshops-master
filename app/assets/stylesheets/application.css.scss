@@ -34,7 +34,7 @@ nav {
      padding-right: 3rem;
 		 margin-left: 2rem;
 		 &:hover {
-		     color: 7FFFD4;
+		     color: white;
          text-decoration: overline;
          text-overline-width: 10px;
 		}
@@ -43,4 +43,7 @@ nav {
 
 .products_table {
   text-align: center;
+  tr:hover {
+    background-color: #e4e4e4;
+  }
 }

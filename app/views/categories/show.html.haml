@@ -4,8 +4,8 @@
     %h2
       %b Category:
       #{category.name}
-    .category_class
-      %table.table
+    .products_table
+      %table.table.table-bordered
         %p Products:
         -category.products.each do |product|
           %tr
