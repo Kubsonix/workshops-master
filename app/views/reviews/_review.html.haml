@@ -1,4 +1,6 @@
-%p= review.content
-%p
-  %b= review.rating
-  %em= review.author
+%b= User.find(review.user_id).firstname
+%b= User.find(review.user_id).lastname
+Rate:
+%b= review.rating
+%h6= review.content
+%br
