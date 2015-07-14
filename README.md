@@ -43,11 +43,11 @@ Setup the database for your application (development and test environments):
 
 8. [OK] Make sure `ReviewDecorator` is used properly, There's one action which needs to be declared there. See `spec/decorators/review_decorator_spec.rb` for details.
 
-9. Check if each review is assigned to user who wrote it.
+9. [OK] Check if each review is assigned to user who wrote it.
 
 10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
 
-11. In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
+11. [OK] In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
 
 12. Don't forget to check if application works in the browser :).
 
