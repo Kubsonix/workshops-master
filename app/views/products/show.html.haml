@@ -19,7 +19,7 @@
 = render 'reviews/form'
 
 = render reviews
+- if current_user && product.user_id == current_user.id
+  = link_to 'Edit', edit_category_product_path(category.id, product.id)
 
-= link_to 'Edit', edit_category_product_path(category.id, product.id)
-\|
 = link_to 'Back', category_products_path, class: 'btn btn-primary'

@@ -1,17 +1,15 @@
 %p#notice= notice
-
 %p
-  %b Name:
-  = category.name
-
-%p
-  - category.products.each do |product|
-    = product.title
-
-%p
-  %h3 New product
-  = render 'products/form'
-
-= link_to 'Edit', edit_category_path(category)
-\|
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+  %h1 Category: #{category.name}
+  .category_class
+    %table.table
+      %tr
+        %th Products:
+      %th
+        -category.products.each do |product|
+          %tr
+            %td= link_to product.title, category_product_url(category, product)
+    .class_form
+      New product
+      = render 'products/form'
+      = link_to 'Back', categories_path, class: 'btn btn-primary'

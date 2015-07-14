@@ -45,7 +45,7 @@ Setup the database for your application (development and test environments):
 
 9. [OK] Check if each review is assigned to user who wrote it.
 
-10. If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
+10. [OK] If some actions (like links to edit a page, create a new one) are not allowed for a particular user then please hide them in a template (for example with `if`).
 
 11. [OK] In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
 
