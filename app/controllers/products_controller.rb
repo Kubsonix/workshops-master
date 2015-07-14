@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+
+  before_action :author!, only: [:edit, :update, :destroy]
+  before_action :is_signed_in, only: [:edit, :create, :update]
+
   expose(:category)
   expose(:products)
   expose(:product)
@@ -19,6 +23,7 @@ class ProductsController < ApplicationController
 
   def create
     self.product = Product.new(product_params)
+    product.user_id = current_user.id
 
     if product.save
       category.products << product
@@ -46,5 +51,22 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:title, :description, :price, :category_id)
+  end
+
+  def author!
+    if !current_user.nil?
+    unless self.product.user == current_user || current_user.admin?
+      redirect_to category_product_url(category, product),
+        flash: { error: 'You are not allowed to edit this product.' }
+    end
+  else
+    redirect_to new_user_session_path
+  end
+  end
+
+  def is_signed_in
+    if current_user.nil?
+      redirect_to new_user_session_path
+    end
   end
 end
