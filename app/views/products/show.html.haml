@@ -16,9 +16,10 @@
       %tr
         %td Category
         %td= product.category.name
-
-  = render 'reviews/form'
+  - if current_user && !current_user.nil?
+    = render 'reviews/form'
   %h3 Reviews (average rating: #{product.average_rating})
   = render reviews
-  = link_to 'Edit', edit_category_product_path(category.id, product.id), class: 'btn btn-primary'
+  - if current_user && product.user_id == current_user.id
+    = link_to 'Edit', edit_category_product_path(category.id, product.id), class: 'btn btn-primary'
   = link_to 'Back', category, class: 'btn btn-primary'

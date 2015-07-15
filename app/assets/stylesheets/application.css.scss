@@ -13,6 +13,15 @@ body {
   padding: 3.5rem 0;
 }
 
+.wrapper_my_profile {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  tr:hover {
+    background-color: red;
+  }
+}
+
 h1 {
   font-size: 40px;
   font-weight: bold;
@@ -45,7 +54,6 @@ nav {
 		 &:hover {
 		     color: white;
          text-decoration: overline;
-         text-overline-width: 10px;
 		}
 	}
 }

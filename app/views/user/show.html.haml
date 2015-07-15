@@ -7,14 +7,17 @@
             %h3 #{@user.firstname} #{@user.lastname}
             %h4 #{@user.email}
             %h5 Joined at: #{@user.created_at.strftime("%d-%m-%Y")}
-
-%table.table.table-hover
-  %tr
-    %th.col-md-3 Product
-    %th Review
-    %th.col-md-1 Date
-  - @reviews.last(5).reverse.each do |r|
+.wrapper_my_profile
+  %h2 Your last 5 reviews
+  %table.table.table-hover
     %tr
-      %td= r.product.title
-      %td= r.content
-      %td= r.created_at.strftime("%d-%m-%y")
+      %th.col-md-2 Product
+      %th Review
+      %th.col-md-1 Rate
+      %th.col-md-1 Date
+    - @reviews.last(5).reverse.each do |r|
+      %tr
+        %td= r.product.title
+        %td= r.content
+        %td= r.rating
+        %td= r.created_at.strftime("%d-%m-%y")
