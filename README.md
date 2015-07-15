@@ -10,7 +10,7 @@ Don't fork the repository. Clone it (`git clone git@github.com:netguru-training/
 
 **Database**
 
-Copy the database config file (and edit if needed): 
+Copy the database config file (and edit if needed):
 ` cp config/database.yml.sample config/database.yml`
 
 Make sure the user you've listed in `database.yml` is created for postgres:
@@ -26,10 +26,10 @@ Setup the database for your application (development and test environments):
 1. [OK] There are a few missing fields on the `User` model. Make sure `spec/models/user_spec.rb passes.`
 
 2. [OK] Make sure settings for [devise](https://github.com/plataformatec/devise) are
-   configured properly.  If they aren’t, most of the controller specs will fail: 
+   configured properly.  If they aren’t, most of the controller specs will fail:
   * Most of the configuration changes require the server to be restarted.
   * At some point **you'll have to overwrite the default devise views** - you can find all the required info in the gem readme.
-  
+
 3. [OK] Check `spec/controllers/categories_controller_spec.rb` - there should be a
    couple errors on actions checking admin presence.
 
@@ -49,9 +49,9 @@ Setup the database for your application (development and test environments):
 
 11. [OK] In navigation bar insert links for guest users to login / signup and for users that are already logged in - to logout.
 
-12. Don't forget to check if application works in the browser :).
+12. [OK] Don't forget to check if application works in the browser :).
 
-13. Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
+13. [OK, I HOPE] Unleash your design skills. Add some CSS to the application to make it prettier (we won't say it's ugly, but you know, it's not a beauty [YET!]). Please use [Bootstrap 3](http://getbootstrap.com/css/) for styling, which is already added to application. Psss! Don't forget about styling `devise` views :).
 
 14. [OK] Create user profile page (using Boostrap 3). Use your imagination about what should go there. You can start with name, email, etc.
 
@@ -76,6 +76,6 @@ Setup the database for your application (development and test environments):
 * [http://guides.rubyonrails.org/](http://guides.rubyonrails.org/) - sooner or later this one will come in handy
 * not feeling comfortable with JavaScript / jQuery? CodeSchool can help you with this one too - [http://www.codeschool.com/courses/try-jquery](http://www.codeschool.com/courses/try-jquery)
 
-## Good Luck! 
+## Good Luck!
 
 *We want all attendees at netguru workshops to have an awesome harassment-free experience. Read our full [code of conduct](https://github.com/netguru-training/workshops/blob/master/code_of_conduct.md) for more details.*

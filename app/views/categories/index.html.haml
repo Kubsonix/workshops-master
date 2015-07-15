@@ -1,19 +1,15 @@
 %h1 Listing categories
 
-%table.table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
-  - categories.each do |category|
-    %tr
-      %td= category.name
-      %td= link_to 'Show', category
-      - if current_user && current_user.admin?
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+.wrapper_categories
+  %table.table
+    %h2 Name
+    - categories.each do |category|
+      %tr
+        %td.col-md-6= category.name
+        %td.col-md-3= link_to 'Show', category
+        - if current_user && current_user.admin?
+          %td.col-md-3= link_to 'Edit', edit_category_path(category)
+          %td.col-md-3= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

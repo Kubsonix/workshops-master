@@ -18,6 +18,7 @@
     - @reviews.last(5).reverse.each do |r|
       %tr
         %td= r.product.title
-        %td= r.content
+        %td
+          %i= r.content
         %td= r.rating
         %td= r.created_at.strftime("%d-%m-%y")
