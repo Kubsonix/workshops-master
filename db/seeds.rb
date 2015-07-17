@@ -29,7 +29,7 @@ end
                     user_id: rand(1..5))
 end
 
-300.times do |b|
+800.times do |b|
   Review.create!(content: FFaker::Lorem.paragraph,
                  rating: rand(1..5), product_id: rand(1..120),
                  user_id: rand(1..5))

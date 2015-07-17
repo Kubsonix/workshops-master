@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
   before_action :author!, only: [:edit, :update, :destroy]
   before_action :is_signed_in, only: [:edit, :create, :update]
 
